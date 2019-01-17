@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" class="fontawesome-i2svg-pending">
+
+<head>
+  <meta charset="UTF-6">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard | Admin Area</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="home">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Admin Area</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-auto ml-lg-0 px-2">
+          <a href="index.html" class="nav-link active">Dashboard</a>
+        </li>
+        <li class="nav-item mx-auto ml-lg-0 px-2">
+          <a href="posts.html" class="nav-link">Posts</a>
+        </li>
+        <li class="nav-item mx-auto ml-lg-0 px-2">
+          <a href="categories.html" class="nav-link">Categories</a>
+        </li>
+        <li class="nav-item mx-auto ml-lg-0 px-2">
+          <a href="users.html" class="nav-link">Users</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mx-auto ml-lg-0 dropdown mr-3">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <i class="fas fa-user fa-fw"></i>
+            Welcome Admin
+          </a>
+          <div class="dropdown-menu">
+            <a href="profile.html" class="dropdown-item">
+              <i class="fas fa-user-circle fa-fw"></i>
+              Profile
+            </a>
+            <a href="settings.html" class="dropdown-item">
+              <i class="fas fa-sliders-h"></i>
+              Settings
+            </a>
+          </div>
+        </li>
+        <li class="nav-item mx-auto ml-lg-0">
+          <a href="login.html" class="nav-link">
+            <i class="fas fa-sign-out-alt fa-fw"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="main-header" class="py-2 bg-primary text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>
+          <i class="fas fa-cogs"></i>
+          Dashboard
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="actions" class="py-4 mb-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="#" class="btn btn-primary btn-block" data-toggle="modal"
+           data-target="#addPostModal">
+          <i class="fas fa-plus fa-fw"></i>
+          Add Post
+        </a>
+      </div>
+      <div class="col-md-3 my-3 my-md-0">
+        <a href="#" class="btn btn-primary btn-block" data-toggle="modal"
+           data-target="#addCategoryModal">
+          <i class="fas fa-plus fa-fw"></i>
+          Add Category
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="#" class="btn btn-primary btn-block" data-toggle="modal"
+           data-target="#addUserModal">
+          <i class="fas fa-plus fa-fw"></i>
+          Add User
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="posts" class="pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            <h4>Latest Posts</h4>
+          </div>
+          <table class="table table-striped">
+            <thead class="thead-inverse">
+            <tr>
+              <th class="text-center">#</th>
+              <th class="text-center">Title</th>
+              <th class="text-center">Category</th>
+              <th class="text-center">Date Posted</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td scope="row" class="align-middle text-center">1</td>
+              <td class="align-middle text-center">How to learn HTML</td>
+              <td class="align-middle text-center">Web Development</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-08T19:00">January 8, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">2</td>
+              <td class="align-middle text-center">Best Smartphones in 2018</td>
+              <td class="align-middle text-center">Tech Gadgets</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-09T19:00">January 9, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">3</td>
+              <td class="align-middle text-center">How to learn CSS</td>
+              <td class="align-middle text-center">Web Development</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-10T19:00">January 10, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">4</td>
+              <td class="align-middle text-center">New to freelancing?</td>
+              <td class="align-middle text-center">Business</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-11T19:00">January 11, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">5</td>
+              <td class="align-middle text-center">Stretch to improve posture</td>
+              <td class="align-middle text-center">Health and Wellness</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-12T19:00">January 12, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">6</td>
+              <td class="align-middle text-center">How to learn JS</td>
+              <td class="align-middle text-center">Web Development</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-13T19:00">January 13, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td scope="row" class="align-middle text-center">7</td>
+              <td class="align-middle text-center">Popular Laptops</td>
+              <td class="align-middle text-center">Tech Gadgets</td>
+              <td class="align-middle text-center">
+                <time datetime="2018-01-14T19:00">January 14, 2018</time>
+              </td>
+              <td class="align-middle text-center">
+                <a href="details.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-external-link-alt fa-fw"></i>
+                  Details
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-light text-dark mb-3">
+          <div class="card-body">
+            <h3>Posts</h3>
+            <p class="h1">
+              <i class="fas fa-pencil-alt fa-fw"></i>
+              27
+            </p>
+            <a href="posts.html" class="btn btn-outline-dark btn-sm">View</a>
+          </div>
+        </div>
+        <div class="card text-center bg-light text-dark mb-3">
+          <div class="card-body">
+            <h3>Categories</h3>
+            <p class="h1">
+              <i class="fas fa-folder-open fa-fw"></i>
+              5
+            </p>
+            <a href="categories.html" class="btn btn-outline-dark btn-sm">View</a>
+          </div>
+        </div>
+        <div class="card text-center bg-light text-dark mb-3">
+          <div class="card-body">
+            <h3>Users</h3>
+            <p class="h1">
+              <i class="fas fa-users fa-fw"></i>
+              9
+            </p>
+            <a href="users.html" class="btn btn-outline-dark btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="mainFooter" class="footer bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="lead text-center mb-0">
+          <small>Copyright &copy; 2018</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="addPostModal" class="modal fade">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Add Post</h5>
+        <button class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="postTitle">Title</label>
+            <input type="text" class="form-control" id="postTitle" name="postTitle"
+                   placeholder="Post Title">
+          </div>
+          <div class="form-group">
+            <label for="postCategory">Category</label>
+            <select class="form-control" id="postCategory" name="postCategory">
+              <option value="">Select Post Category</option>
+              <option value="webDevelopment">Web Development</option>
+              <option value="techGadgets">Tech Gadgets</option>
+              <option value="business">Business</option>
+              <option value="healthAndWellness">Health and Wellness</option>
+              <option value="fun">Fun</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="postFile">Image Upload</label>
+            <input type="file" class="form-control-file" id="postFile" name="postFile">
+            <small class="form-text text-muted">Max size 3 MB</small>
+          </div>
+          <div class="form-group">
+            <label for="postBody">Post</label>
+            <textarea name="postBody" class="form-control" id="postBody"
+                      placeholder="Post Body"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary ml-3" data-dismiss="modal">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="addCategoryModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Add Category</h5>
+        <button class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="categoryTitle">Category Title</label>
+            <input type="text" class="form-control" id="categoryTitle" name="categoryTitle"
+                   placeholder="Category Title">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary ml-3" data-dismiss="modal">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="addUserModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Add User</h5>
+        <button class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="userName">Name</label>
+            <input type="text" class="form-control" id="userName" name="userName"
+                   placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Email</label>
+            <input type="email" class="form-control" id="userEmail" name="userEmail"
+                   placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password"
+                   placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="passwordConfirm">Confirm Password</label>
+            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm"
+                   placeholder="Confirm Password">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary ml-3" data-dismiss="modal">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
+  CKEDITOR.replace("postBody");
+</script>
+</body>
+
+</html>

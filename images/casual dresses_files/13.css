@@ -1,0 +1,37 @@
+﻿#topInfoWrap{background:#f5f5f5 url(//www.dhresource.com/dhs/fob/img/store/demo/13/topbg.jpg) no-repeat 50% 2px;}
+.storesearch .infoexpand .feedback-score,.topsharecon dt{background:#fff5f5;}
+.storesearch .infoexpand .feedback-info li a,.topsharecon dt{color:#d43434;}
+.main-entrance{height:46px;border:0;}
+.main-entrance ul{height:46px;background:#ee3c3c;}
+.main-entrance ul li{height:46px;line-height:46px;background:none;}
+.main-entrance ul li.current,.main-entrance ul li.current a:hover{background:#d43434;}
+.main-entrance ul li.current a{height:46px;line-height:46px;margin-top:0;color:#fff;background:#d43434;}
+.main-entrance ul li a{color:#fff;line-height:46px;}
+.main-entrance ul li a:hover{color:#fff; background:#e13838;}
+.col-side,.aboutusout,.detailout{border-color:#fcd2d2;background:#fff5f5;}
+.aboutusout .col-left,.detailout .col-left,.side-t{border-color:#fcd2d2;}
+.side-t{color:#d43434;}
+.title2{background:#fff url(//www.dhresource.com/dhs/fob/img/store/demo/13/titlebg.png) no-repeat 10px 100%; padding-left:28px; line-height:35px;}
+.searchbar .n-yellow-button{color:#fff;background:#ed3c3c;-webkit-box-shadow: 0 2px 1px rgba(6,0,1,.23);-moz-box-shadow: 0 2px 1px rgba(6,0,1,.23);box-shadow: 0 2px 1px rgba(6,0,1,.23);border:1px solid #d53e3e;border-bottom-color:#c93131;background:-webkit-gradient(linear,0 0,0 bottom,from(#ed3c3c),to(#dc3636));background: -moz-linear-gradient(top, #ed3c3c, #dc3636);background: -o-linear-gradient(top, #ed3c3c, #dc3636);}
+.searchbar .n-yellow-button:hover{background:-moz-linear-gradient(top,#ee3c3c,#da4646);background:-webkit-gradient(linear,0 0,0 bottom,from(#ee3c3c),to(#da4646));background:-o-linear-gradient(top,#ee3c3c,#da4646);-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
+.title2{background:#fff url(//www.dhresource.com/dhs/fob/img/store/demo/13/titlebg.png) no-repeat 10px 100%; padding-left:28px; line-height:35px;}
+
+.searchbar{height:66px; right:0;}
+.search-bar-autocomplete{margin-top:16px;}
+.search-bar-store{*margin-bottom:15px;}
+.search-bar-button,.search-bar-button:hover{width:130px; height:66px;  text-align:left; padding-left:10px;
+-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border:0;background:url(//www.dhresource.com/dhs/fob/img/store/demo/13/search-buttonbg.png) no-repeat 0 0;}
+.search-bar-button:hover{background-position:0 -66px;}
+.popular-searches{padding-top:0; margin-top:-5px;}
+
+
+.sale-item {position: relative;}
+.sale-itemcon{position: absolute;background-color: #e13838;left:0;top:46px;border:none;z-index: 1;}
+.main-entrance .sale-item a{position: relative;z-index: 3;height:46px;margin-top:0px;background:url(//css.dhresource.com/buyer/home/image/common.png?v=20150421) no-repeat  98px -261px;}
+.main-entrance .sale-item a:hover,.main-entrance .showLayer .sale-tit{border: none;background: #e13838 url(//css.dhresource.com/buyer/home/image/common.png?v=20150421) no-repeat  98px -261px;}
+.main-entrance .sale-itemcon a{background: none;padding-right: 0px;}
+.main-entrance .sale-itemcon a:hover{background:#d43434;border: none;text-decoration: none;color:#fff;}
+.sale-itemcon{display: none;}
+.showLayer .sale-itemcon{display: block;}
+.main-entrance ul li.current .sale-tit{background: url(//css.dhresource.com/buyer/home/image/common.png?v=20150421) no-repeat  98px -261px;}
+
