@@ -100,8 +100,10 @@ include("includes/db.php");
 	
 	if(isset($_POST['login'])){
 	
-		$email = mysql_real_escape_string($_POST['email']);
-		$pass = mysql_real_escape_string($_POST['password']);
+		// $email = mysql_real_escape_string($_POST['email']);
+		// $pass = mysql_real_escape_string($_POST['password']);
+		$email = $_POST['email'];
+		$pass = $_POST['password'];
 	
 	$sel_user = "select * from admins where user_email='$email' AND user_pass='$pass'";
 	
