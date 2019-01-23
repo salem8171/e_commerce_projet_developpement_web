@@ -1,4 +1,9 @@
 <?php 
+
+if(!isset($_SESSION['qty']))
+{
+	$_SESSION['qty']=0;
+}
 // After uploading to online server, change this connection accordingly
 $con = mysqli_connect("localhost","root","","ecommerce");
 
@@ -33,14 +38,16 @@ function cart()
 		$check_pro = "select * from cart where ip_add='$ip' AND p_id='$pro_id'";	
 		$run_check = mysqli_query($con, $check_pro); 	
 		
+		
 		if(mysqli_num_rows($run_check)>0)
 		{
 			echo "";	
 		}
 		else 
 		{	
-			$insert_pro = "insert into cart (p_id,ip_add) values ('$pro_id','$ip')";	
-			$run_pro = mysqli_query($con, $insert_pro); 	
+			$insert_pro = "insert into cart (p_id,ip_add,qty) values ('$pro_id','$ip',1)";	
+			$run_pro = mysqli_query($con, $insert_pro); 
+			$_SESSION['qty']++;	
 			echo "<script>window.open('index.php','_self')</script>";
 		}		
 	}

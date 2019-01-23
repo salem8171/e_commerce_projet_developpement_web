@@ -75,7 +75,7 @@
 										<td><?php echo $product_title; ?><br>
 											<img src="admin_area/product_images/<?php echo $product_image;?>" width="60" height="60"/>
 										</td>
-										<td> <input type="text" size="4" name='qty' value="<?php echo $_SESSION['qty'];?>"/> </td>
+										<td> <input type="text" size="4" name='qty' value="<?php echo $p_price['qty'];?>"/> </td>
 										<?php 
 											if(isset($_POST['update_cart']))
 											{													
