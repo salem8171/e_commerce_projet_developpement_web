@@ -2,64 +2,71 @@
 <?php include("includes/slider.php"); ?>
 
 <!--Content wrapper starts-->
-<div class="span3">
-	<div >Categories</div>
-	<?php getCats(); ?>
-	<div >Gender</div>
-	<?php getBrands(); ?>
-</div>
-<div class="span8">
-	<div id="content_area">
-		<?php cart(); ?>
-		<div id="shopping_cart">
-			<span style="float:right; font-size:17px; padding:5px; line-height:40px;">
-				<?php
-					if(isset($_SESSION['customer_email']))
-					{
-						echo "<b>Welcome:</b>" . $_SESSION['customer_email'] . "<b style='color:yellow;'>Your</b>" ;
-					}
-					else
-					{
-						echo "<b>Welcome Guest:</b>";
-					}
-				?>
-				<b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" style="color:yellow">Go to Cart</a>
+<section class="main-content">
+				<div class="row">
+					<div class="span12">													
+						<div class="row">
+							<div class="span12">
+								<h4 class="title">
+									<span class="pull-left"><span class="text"><span class="line">Feature <strong>Products</strong></span></span></span>
+									<span class="pull-right">
+										<a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
+									</span>
+								</h4>
+								<div id="myCarousel" class="myCarousel carousel slide">
+									<div class="carousel-inner">
+									<?php
+										$con = mysqli_connect('localhost','root','','ecommerce');
+										$req="select * from products";
+										$res=mysqli_query($con,$req);
+									?>
+										<div class="active item">
+											<ul class="thumbnails">	
+												<!--////////////////////////////////////////////// -->
+												<?php 
+													while($data=mysqli_fetch_assoc($res))
+													{
 
-
-				<?php
-					if(!isset($_SESSION['customer_email']))
-					{
-						echo "<a href='checkout.php' style='color:orange;'>Login</a>";
-					}
-					else
-					{
-						echo "<a href='logout.php' style='color:orange;'>Logout</a>";
-					}
-				?>
-			</span>
-		</div>
-		<div id="products_box">
-			<br/>
-			<br/>
-			<br/>
-			<?php getPro(); ?>
-			<br/>
-			<br/>
-			<br/>
-			<?php getCatPro(); ?>
-			<br/>
-			<br/>
-			<br/>
-			<?php getBrandPro(); ?>
-			<br/>
-			<br/>
-			<br/>
-		</div>
-	</div>
-</div>
-<br/>
-<br/>
-<br/>
+													
+												?>
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>
+														<p><a href="product_detail.html"><img src="themes/images/ladies/1.jpg" alt="" /></a></p>
+														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
+														<a href="products.html" class="category">Commodo consequat</a>
+														<p class="price">$17.25</p>
+													</div>
+												</li>
+												<?php
+													}
+												?>
+												<!--////////////////////////////////////////////// -->
+											</ul>
+										</div>
+										
+										<div class="item">
+											<ul class="thumbnails">
+												<li class="span3">
+													<div class="product-box">
+														<p><a href="product_detail.html"><img src="themes/images/ladies/5.jpg" alt="" /></a></p>
+														<a href="product_detail.html" class="title">Know exactly</a><br/>
+														<a href="products.html" class="category">Quis nostrud</a>
+														<p class="price">$22.30</p>
+													</div>
+												</li>																																											
+											</ul>
+										</div>
+									</div>							
+								</div>
+							</div>						
+						</div>
+						<br/>
+						
+								
+					</div>				
+				</div>
+			</section>
 
 <?php include("includes/our_clients.php"); ?>			
 <?php include("includes/footer.php"); ?>
