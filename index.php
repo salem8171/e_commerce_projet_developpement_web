@@ -26,13 +26,28 @@
 												<?php 
 													while($data=mysqli_fetch_assoc($res))
 													{
-
+														$pro_id = $data['product_id'];
+														$pro_cat = $data['product_cat'];
+														$pro_brand = $data['product_brand'];
+														$pro_title = $data['product_title'];
+														$pro_price = $data['product_price'];
+														$pro_image = $data['product_image'];
+														
 													
 												?>
 												<li class="span3">
 													<div class="product-box">
 														<span class="sale_tag"></span>
-														<p><a href="product_detail.html"><img src="themes/images/ladies/1.jpg" alt="" /></a></p>
+														<p><?php   	echo "
+															<div id='single_product'>			
+																<h3>$pro_title</h3>				
+																<img src='admin_area/product_images/$pro_image' width='180' height='180' />				
+																<p><b> Price: $ $pro_price </b></p>				
+																<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>				
+																<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>			
+															</div>		
+														";
+													?> </p>
 														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
 														<a href="products.html" class="category">Commodo consequat</a>
 														<p class="price">$17.25</p>
