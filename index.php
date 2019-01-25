@@ -15,70 +15,70 @@
 								</h4>
 								<div id="myCarousel" class="myCarousel carousel slide">
 									<div class="carousel-inner">
-									<?php
-										$con = mysqli_connect('localhost','root','','ecommerce');
-										$req="select * from products";
-										$res=mysqli_query($con,$req);
-									?>
-										<div class="active item">
-											<ul class="thumbnails">	
-												<!--////////////////////////////////////////////// -->
-												<?php 
-													while($data=mysqli_fetch_assoc($res))
-													{
-														$pro_id = $data['product_id'];
-														$pro_cat = $data['product_cat'];
-														$pro_brand = $data['product_brand'];
-														$pro_title = $data['product_title'];
-														$pro_price = $data['product_price'];
-														$pro_image = $data['product_image'];
-														
-													
-												?>
-												<li class="span3">
-													<div class="product-box">
-														<span class="sale_tag"></span>
-														<p><?php   	echo "
-															<div id='single_product'>			
-																<h3>$pro_title</h3>				
-																<img src='admin_area/product_images/$pro_image' width='180' height='180' />				
-																<p><b> Price: $ $pro_price </b></p>				
-																<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>				
-																<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>			
-															</div>		
-														";
-													?> </p>
-														<a href="product_detail.html" class="title">Ut wisi enim ad</a><br/>
-														<a href="products.html" class="category">Commodo consequat</a>
-														<p class="price">$17.25</p>
-													</div>
-												</li>
-												<?php
-													}
-												?>
-												<!--////////////////////////////////////////////// -->
-											</ul>
-										</div>
+										<?php
+											$req="select * from products";
+											$res=mysqli_query($con,$req);
 										
-										<div class="item">
-											<ul class="thumbnails">
-												<li class="span3">
-													<div class="product-box">
-														<p><a href="product_detail.html"><img src="themes/images/ladies/5.jpg" alt="" /></a></p>
-														<a href="product_detail.html" class="title">Know exactly</a><br/>
-														<a href="products.html" class="category">Quis nostrud</a>
-														<p class="price">$22.30</p>
+											$nb_products_fetched = 0;
+											while($data=mysqli_fetch_assoc($res))
+											{
+												$pro_id = $data['product_id'];
+												$pro_cat = $data['product_cat'];
+												$pro_brand = $data['product_brand'];
+												$pro_title = $data['product_title'];
+												$pro_price = $data['product_price'];
+												$pro_image = $data['product_image'];
+												
+												if ($nb_products_fetched == 0)
+												{
+													echo "
+														<div class='active item'>
+															<ul class='thumbnails'>
+													";
+												}
+												elseif ($nb_products_fetched % 4 == 0)
+												{
+													echo "
+														<div class='item'>
+															<ul class='thumbnails'>
+													";
+												}
+												
+												echo "
+													<li class='span3'>
+														<div class='product-box'>
+															<p><a href='details.php?pro_id=$pro_id'><img src='admin_area/product_images/$pro_image' alt='' /></a></p>
+															<a href='details.php?pro_id=$pro_id' class='title'>$pro_title</a><br/>
+															<a href='products.html' class='category'>$pro_cat</a>
+															<p class='price'>$$pro_price</p>
+														</div>
+													</li>
+												";
+
+												if (($nb_products_fetched + 1) % 4 == 0)
+												{
+													echo "
+															</ul>
+														</div>
+													";
+												}
+
+												$nb_products_fetched++;
+											}
+
+											if ($nb_products_fetched % 4 != 0)
+											{
+												echo "
+														</ul>
 													</div>
-												</li>																																											
-											</ul>
-										</div>
+												";
+											}
+										?>
 									</div>							
 								</div>
 							</div>						
 						</div>
-						<br/>
-						
-								
+						<br/>	
 					</div>				
 				</div>
 			</section>
