@@ -37,7 +37,7 @@
   	<body>
 		<div id="top-bar" class="container">
 			<div class="row">
-				<div class="span4">
+				<div class="span4" style="margin-left: 55px;">
 			    <form method="get" action="results.php" enctype="multipart/form-data">
 						<div class="row">
 							<div class="container">
@@ -49,19 +49,32 @@
 						</div>
 					</form>
 				</div>
-				<div class="span8">
-					<div class="account pull-right">
-						<ul class="user-menu">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="cart.php">Your Cart</a></li>
-							<li><a href="checkout.php">Checkout</a></li>
-							<li><a href="customer_register.php">Login</a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 		<div id="wrapper" class="container">
-			<section class="navbar main-menu">
-				<div class="navbar-inner main-menu"><a href="index.php" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a></div>
+		<section class="navbar main-menu">
+				<div class="navbar-inner main-menu">				
+					<a href="index.php" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
+					<nav id="menu" class="pull-right">
+						<ul>
+							<li><a href="index.php">Home</a></li>
+							<li><a>Categories</a>					
+								<ul>
+									<?php getCats(); ?>							
+								</ul>
+							</li>
+							<li><a href="cart.php">Your Cart</a></li>
+							<?php 
+								if (isset($_SESSION['customer_email']))
+								{
+									echo "<li><a>".$_SESSION['customer_email']."</a></li>";
+								} else
+								{
+									echo "<li><a href='customer_register.php'>Login</a></li>";
+									echo "<li><a href='./login.php'>login</a></li>";
+								}
+							?>
+						</ul>
+					</nav>
+				</div>
 			</section>

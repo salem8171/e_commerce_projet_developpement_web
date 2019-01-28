@@ -44,7 +44,7 @@
 			{			
 				$_SESSION['customer_email']=$c_email; 				
 				echo "<script>alert('You logged in successfully, Thanks!')</script>";
-				echo "<script>window.open('customer/my_account.php','_self')</script>";
+				echo "<script>window.open('customer/m.php','_self')</script>";
 			
 			}
 			else
