@@ -34,11 +34,11 @@
 		<![endif]-->
 	</head>
 
-  	<body>
+  	<body style='padding-top: 35px;'>
 		<div id="top-bar" class="container">
 			<div class="row">
 				<div class="span4" style="margin-left: 55px;">
-			    <form method="get" action="results.php" enctype="multipart/form-data">
+			    	<form method="get" action="results.php" enctype="multipart/form-data">
 						<div class="row">
 							<div class="container">
 								<div class="row">
@@ -52,8 +52,8 @@
 			</div>
 		</div>
 		<div id="wrapper" class="container">
-		<section class="navbar main-menu">
-				<div class="navbar-inner main-menu">				
+			<section class="navbar main-menu">
+				<div class="navbar-inner main-menu" style='position: fixed; left: 0px; padding-left: 17%; padding-right: 17%; right: 0px; top: 0px; padding-top: 10px; z-index: 100;'>				
 					<a href="index.php" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
 					<nav id="menu" class="pull-right">
 						<ul>
@@ -67,7 +67,14 @@
 							<?php 
 								if (isset($_SESSION['customer_email']))
 								{
-									echo "<li><a>".$_SESSION['customer_email']."</a></li>";
+									echo "
+										<li>
+											<a>".$_SESSION['customer_email']."</a>
+											<ul>
+												<li><a href='logout.php'>Log out</a></li>
+											</ul>
+										</li>
+									";
 								} else
 								{
 									echo "<li><a href='customer_register.php'>Sign up</a></li>";
