@@ -4,28 +4,28 @@
 
 <section class="main-content">				
 	<div class="row">
-		<div class="span7">					
+		<div class="span12" >					
 			<h4 class="title"><span class="text"><strong>Register</strong> Form</span></h4>
-			<form action="customer_register.php" method="post" enctype="multipart/form-data">		
-				<table align="center" width="750">
+			<form action="customer_register.php" method="post" enctype="multipart/form-data" style='margin-left:100px;'>		
+				<table style ='align:center;' width="750">
 					<tr>
-						<td align="right">Customer Name:</td>
+						<td style ='align:center;'>Customer Name:</td>
 						<td><input type="text" name="c_name" required/></td>
 					</tr>			
 					<tr>
-						<td align="right">Customer Email:</td>
+						<td style ='align:center;'>Customer Email:</td>
 						<td><input type="text" name="c_email" required/></td>
 					</tr>			
 					<tr>
-						<td align="right">Customer Password:</td>
+						<td style ='align:center;'>Customer Password:</td>
 						<td><input type="password" name="c_pass" required/></td>
 					</tr>			
 					<tr>
-						<td align="right">Customer Image:</td>
+						<td style ='align:center;'>Customer Image:</td>
 						<td><input type="file" name="c_image" required/></td>
 					</tr>
 					<tr>
-						<td align="right">Customer Country:</td>
+						<td style ='align:center;'>Customer Country:</td>
 						<td>
 							<select name="c_country">
 								<option>Select a Country</option>
@@ -33,8 +33,8 @@
 								<option>India</option>
 								<option>Japan</option>
 								<option>Pakistan</option>
-								<option>Israel</option>
 								<option>Nepal</option>
+								<option>Tunisia</option>
 								<option>United Arab Emirates</option>
 								<option>United States</option>
 								<option>United Kingdom</option>
@@ -42,18 +42,18 @@
 						</td>
 					</tr>			
 					<tr>
-						<td align="right">Customer City:</td>
+						<td style ='align:center;'>Customer City:</td>
 						<td><input type="text" name="c_city" required/></td>
 					</tr>			
 					<tr>
-						<td align="right">Customer Contact:</td>
+						<td style ='align:center;'>Customer Contact:</td>
 						<td><input type="text" name="c_contact" required/></td>
 					</tr>			
 					<tr>
-						<td align="right">Customer Address</td>
+						<td style ='align:center;'>Customer Address</td>
 						<td><input type="text" name="c_address" required/></td>
 					</tr>
-					<tr align="center">
+					<tr style ='align:center;'>
 						<td colspan="6"><input type="submit" name="register" value="Create Account" /></td>
 					</tr>
 				</table>
@@ -91,7 +91,7 @@
 		{
 			$_SESSION['customer_email']=$c_email; 		
 			echo "<script>alert('Account has been created successfully, Thanks!')</script>";
-			echo "<script>window.open('customer/my_account.php','_self')</script>";
+			echo "<script>window.open('index.php','_self')</script>";
 		}
 		else 
 		{		
@@ -101,4 +101,6 @@
 		}
 	}
 ?>
+
+<?php include("includes/our_clients.php"); ?>
 <?php include("includes/footer.php"); ?>

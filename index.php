@@ -79,7 +79,8 @@
 					</div>
 				</div>						
 			</div>
-			<br/>	
+			<br/>
+			<?php include("includes/feature_box.php"); ?>
 		</div>				
 	</div>
 </section>

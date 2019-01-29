@@ -42,7 +42,7 @@
 						<div class="row">
 							<div class="container">
 								<div class="row">
-									<div class="span3"><input type="text" class="input-block-level search-query" name="user_query" placeholder="Search a Product"/ ></div>
+									<div class="span3"><input type="text" class="input-block-level search-query" name="user_query" placeholder="Search a Product"></div>
 									<div class="span8"><input type="submit" name="search" value="Search" ></div>
 								</div>
 							</div>
@@ -70,7 +70,7 @@
 									echo "<li><a>".$_SESSION['customer_email']."</a></li>";
 								} else
 								{
-									echo "<li><a href='customer_register.php'>Login</a></li>";
+									echo "<li><a href='customer_register.php'>Sign up</a></li>";
 									echo "<li><a href='./login.php'>login</a></li>";
 								}
 							?>

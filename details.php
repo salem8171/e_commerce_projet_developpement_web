@@ -23,7 +23,7 @@
 	<div class="row">						
 		<div class="span12">
 		<h4 class="title"><span class="text"><?php echo $pro_title ?></span></h4>
-			<div class="row">
+			<div class="row" style='margin-left:30px;'>
 				<div class="span4">
 					<a class="thumbnail" data-fancybox-group="group1" title="Description 1"><img style="width:360px; height:360px;" alt="" src="admin_area/product_images/<?php echo $pro_image ?>"></a>
 					<br/>
