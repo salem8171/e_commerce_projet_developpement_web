@@ -1,7 +1,5 @@
 <?php include("includes/header.php"); ?>
-<section class="header_text sub">
-	<img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
-</section>	
+<?php include("includes/banner.php"); ?>	
 <h4 class="title"><span class="text"><strong>Login</strong> Form</span></h4>
 <div id="shopping_cart">		
 	<span style="float:right; font-size:18px; padding:5px; line-height:40px;">	

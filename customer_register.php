@@ -1,10 +1,7 @@
 <?php include("includes/db.php"); ?>
 <?php include("includes/header.php"); ?>
+<?php include("includes/banner.php"); ?>
 
-<section class="header_text sub">
-<img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
-
-</section>			
 <section class="main-content">				
 	<div class="row">
 		<div class="span7">					
